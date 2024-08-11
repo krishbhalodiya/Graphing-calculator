@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphing Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" id="display" disabled>
+            <div class="buttons">
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="appendOperator('+')">+</button>
+                
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendOperator('-')">-</button>
+                
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendOperator('*')">*</button>
+                
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendOperator('.')">.</button>
+                <button onclick="appendOperator('/')">/</button>
+                <button onclick="appendOperator('sqrt')">√</button>
+                
+                <button onclick="appendOperator('^')">^</button>
+                <button onclick="appendOperator('(')">(</button>
+                <button onclick="appendOperator(')')">)</button>
+                <button onclick="calculate()">=</button>
+                
+                <button onclick="appendOperator('sin(')">sin</button>
+                <button onclick="appendOperator('cos(')">cos</button>
+                <button onclick="appendOperator('tan(')">tan</button>
+                <button onclick="appendOperator('log(')">log</button>
+                
+                <button onclick="appendOperator('exp(')">exp</button>
+                <button onclick="appendOperator('pi')">π</button>
+                <button onclick="appendOperator('e')">e</button>
+                <button onclick="clearDisplay()">C</button>
+                
+                <button onclick="toggleRadDeg()">Rad</button>
+                <button onclick="clearMemory()">Clear Memory</button>
+                <button onclick="displayList()">Display Memory</button>
+                <button onclick="sumList()">Sum Memory</button>
+                <button onclick="exit()">Exit</button>
+            </div>
+        </div>
+        <div class="graphing">
+            <h2>Graphing Calculator</h2>
+            <input type="text" id="function-input" placeholder="Enter function e.g. sin(x)" />
+            <button onclick="plotGraph()">Plot Graph</button>
+            <canvas id="graphCanvas"></canvas>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
